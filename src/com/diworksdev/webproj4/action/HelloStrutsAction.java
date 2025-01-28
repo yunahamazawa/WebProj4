@@ -1,9 +1,9 @@
-package com.diworksdev.webproj4.action.com;
+package com.diworksdev.webproj4.action;
 
 
 import com.opensymphony.xwork2.ActionSupport;
 
-import diworksdev.webproj4.dao.com.HelloStrutsDAO;
+import diworksdev.webproj4.dao.HelloStrutsDAO;
 
 public class HelloStrutsAction extends ActionSupport{
 	public String execute() {

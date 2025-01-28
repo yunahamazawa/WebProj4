@@ -1,4 +1,4 @@
-package diworksdev.webproj4.dao.com;
+package diworksdev.webproj4.dao;
 
 
 import java.sql.Connection;
@@ -7,7 +7,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import diworksdev.webproj4.util.DBConnector;
+
+
+
 public class HelloStrutsDAO {
+
 
 
 	public boolean select() {
@@ -19,7 +23,7 @@ public class HelloStrutsDAO {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-				ret=true;
+			ret=true;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -31,5 +35,4 @@ public class HelloStrutsDAO {
 		}
 		return ret;
 	}
-
 }
