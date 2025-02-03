@@ -1,4 +1,4 @@
-package diworksdev.webproj4.dao;
+package com.diworksdev.webproj4.dao;
 
 
 import java.sql.Connection;
@@ -6,33 +6,32 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import diworksdev.webproj4.util.DBConnector;
+import com.diworksdev.webproj4.util.DBConnector;
 
 
 
-public class HelloStrutsDAO {
+public class HelloStrutsDAO{
 
 
-
-	public boolean select() {
-		boolean ret=false;
+	public boolean select(){
+		boolean ret = false;
 		DBConnector db = new DBConnector();
-		Connection con = db.getConnection();
+		Connection con = db. getConnection();
 		String sql = "select * from users";
-		try {
+		try{
 			PreparedStatement ps = con.prepareStatement(sql);
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
-			ret=true;
+				ret=true;
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		try {
+			}
+			try {
 			con.close();
-		} catch (SQLException e) {
+			} catch (SQLException e) {
 			e.printStackTrace();
-		}
-		return ret;
+			}
+			return ret;
 	}
 }
