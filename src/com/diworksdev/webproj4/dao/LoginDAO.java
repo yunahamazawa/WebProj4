@@ -36,9 +36,9 @@ public class LoginDAO {
 	}
 	try {
 		con.close();
-		} catch (SQLException e) {
+	} catch (SQLException e) {
 		e.printStackTrace();
-		}
-		return ret;
+	}
+	return ret;
 	}
 }
