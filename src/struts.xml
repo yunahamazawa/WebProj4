@@ -15,7 +15,7 @@
 <result name="error">helloStrutsError.jsp</result>
 </action>
 
-<action name="WelcomeAction" class="com.diworksdev.webproj4.action.WelcomesAction" method="execute">
+<action name="WelcomeAction" class="com.diworksdev.webproj4.action.WelcomeAction" method="execute">
 <result name="success">welcome.jsp</result>
 </action>
 
